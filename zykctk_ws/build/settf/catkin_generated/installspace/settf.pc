@@ -1,0 +1,8 @@
+prefix=/home/hust/zykctk_ws/install
+
+Name: settf
+Description: Description of settf
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/hust/zykctk_ws/install/lib 
+Requires: roscpp

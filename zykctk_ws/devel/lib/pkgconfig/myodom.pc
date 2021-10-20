@@ -1,0 +1,8 @@
+prefix=/home/hust/zykctk_ws/devel
+
+Name: myodom
+Description: Description of myodom
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/hust/zykctk_ws/devel/lib 
+Requires: roscpp

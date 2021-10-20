@@ -1,0 +1,2 @@
+base_controller:depthimage_to_laserscan:myodom:serial:settf:teleop_twist_keyboard
+-DCATKIN_DEVEL_PREFIX=/home/hust/zykctk_ws/devel -DCMAKE_INSTALL_PREFIX=/home/hust/zykctk_ws/install -G Unix Makefiles

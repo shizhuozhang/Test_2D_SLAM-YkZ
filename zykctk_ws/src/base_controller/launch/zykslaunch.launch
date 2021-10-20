@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  <!--rosrun base_controller base_controller  启动串口通信-->
+  <node pkg="base_controller" type="base_controller" name="base_controller"/>
+  <!--rosrun myodom myodom-->
+   <node pkg="myodom" type="myodom" name="myodom"/>
+  <!--rosrun settf tf_broadcaster  发布tf信息-->
+  <node pkg="settf" type="tf_broadcaster" name="tf_broadcaster"/>
+  <!--rosrun depthimage_to_laserscan depthimage_to_laserscan image:=/camera/depth/image_raw-->
+  <!--<node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_2_laserscan"/>-->
+ <!--<remap from="image" to="/camera/depth/image_raw"/>-->
+ <!--rosrun gmapping slam_gmapping scan:=scan-->
+ <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping"/>
+ <remap from="scan" to="scan"/>
+
+  <node pkg="rviz" type="rviz" name="rviz" />
+<!--args="-d $(find hector_slam_example)/launch/rviz_cfg.rviz"-->
+
+</launch>

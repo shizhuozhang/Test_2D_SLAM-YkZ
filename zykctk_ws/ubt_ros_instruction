@@ -1,0 +1,29 @@
+$ sudo cutecom 使用权限打开软件
+$ uname -r  显示当前计算机中的ubuntu内核版本
+$ dmesg   显示系统日志文件
+$ sudo cp -v ch34*.ko /lib/modules/4.15.0-33-generic/kernel/drivers/usb/serial/ 复制文件到某个文件夹
+$ sudo apt-get install minicom  安装某程序
+$ rm ~/.bashrc 移除文件.bashrc
+$ gedit ~/.bashrc   
+$ sudo chmod 666 /dev/ttyUSB0  解决cutecom的权限问题
+
+
+$ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc  roscore未安装问题
+gedit ~/.bashrc 编辑文件
+
+
+
+rospack list | grep zykctk_ws
+实验课项目相关
+cd ~/zykctk_ws/
+catkin_make
+source ~/zykctk_ws/devel/setup.bash
+echo "source /zykctk_ws/devel/setup.bash" >> ~/.bashrc 
+roscore
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+rosrun base_controller base_controller
+
+调试相关
+rostopic echo /cmd_vel
+rosrun rqt_graph rqt_graph
+

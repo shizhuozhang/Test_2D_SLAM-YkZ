@@ -1,0 +1,8 @@
+prefix=/home/hust/zykctk_ws/devel
+
+Name: base_controller
+Description: Description of base_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/hust/zykctk_ws/devel/lib 
+Requires: roscpp rospy std_msgs
